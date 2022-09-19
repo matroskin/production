@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
 import { MainPageAsync } from './pages/MainPage/MainPage.async';
-import './index.scss';
+import './styles/index.scss';
 
 const App = () => {
   return (
