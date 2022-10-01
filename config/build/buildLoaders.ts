@@ -5,6 +5,26 @@ import { BuildOptions } from './types/config';
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
 
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif)$/i,
+    type: 'asset/resource',
+    generator: {
+      filename: 'assets/images/[hash][ext][query]',
+    }
+  }
+
+  const svgLoader = {
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: ['@svgr/webpack'],
+  };
+
+  const typescriptLoader = {
+    test: /\.tsx?$/,
+    use: 'ts-loader',
+    exclude: /node_modules/,
+  };
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -22,13 +42,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/,
-  };
-
   return [
+    fileLoader,
+    svgLoader,
     typescriptLoader,
     cssLoader,
   ];
