@@ -11,13 +11,24 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     generator: {
       filename: 'assets/images/[hash][ext][query]',
     }
-  }
+  };
 
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
     use: ['@svgr/webpack'],
   };
+
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
 
   const typescriptLoader = {
     test: /\.tsx?$/,
@@ -45,6 +56,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   return [
     fileLoader,
     svgLoader,
+    babelLoader,
     typescriptLoader,
     cssLoader,
   ];
