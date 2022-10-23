@@ -25,7 +25,7 @@ module.exports = {
   rules: {
     'comma-dangle': ['error', 'never'],
     'jsx-quotes': ['error', 'prefer-single'],
-    'max-len': ['error', { ignoreComments: true }],
+    'max-len': ['error', { code: 100, ignoreComments: true }],
     'no-shadow': 'off',
     'no-unused-vars': 'warn',
     'no-underscore-dangle': 'off',
@@ -37,9 +37,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'warn',
     'react/function-component-definition': 'off',
-    'react/jsx-filename-extension': [
-      'error', { extensions: ['.js', '.jsx', '.tsx'] }
-    ]
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.tsx'] }]
   },
   globals: {
     __IS_DEV__: true
