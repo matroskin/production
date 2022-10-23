@@ -18,5 +18,5 @@ export function useTheme(): useThemeResult {
   return {
     theme,
     toogleTheme
-  }
+  };
 }

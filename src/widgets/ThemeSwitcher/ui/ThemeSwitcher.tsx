@@ -7,9 +7,9 @@ import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
   className?: string;
-};
+}
 
-export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
+export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
   const { theme, toogleTheme } = useTheme();
 
   return (
@@ -21,4 +21,4 @@ export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
       { theme === Theme.LIGHT ? <LightIcon /> : <DarkIcon /> }
     </Button>
   );
-};
+}

@@ -9,31 +9,31 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     test: /\.(png|jpe?g|gif)$/i,
     type: 'asset/resource',
     generator: {
-      filename: 'assets/images/[hash][ext][query]',
+      filename: 'assets/images/[hash][ext][query]'
     }
   };
 
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
-    use: ['@svgr/webpack'],
+    use: ['@svgr/webpack']
   };
 
   const babelLoader = {
     test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,
     use: {
-      loader: "babel-loader",
+      loader: 'babel-loader',
       options: {
         presets: ['@babel/preset-env']
       }
     }
-  }
+  };
 
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
-    exclude: /node_modules/,
+    exclude: /node_modules/
   };
 
   const cssLoader = {
@@ -45,12 +45,12 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         options: {
           modules: {
             auto: /\.module\.\w+$/i,
-            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
-          },
-        },
+            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
+          }
+        }
       },
-      'sass-loader',
-    ],
+      'sass-loader'
+    ]
   };
 
   return [
@@ -58,6 +58,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     svgLoader,
     babelLoader,
     typescriptLoader,
-    cssLoader,
+    cssLoader
   ];
 }

@@ -5,11 +5,11 @@ import { AboutPage } from 'pages/AboutPage';
 export enum AppRoutes {
   MAIN = 'main',
   ABOUT = 'about',
-};
+}
 
 export const RoutesPath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
-  [AppRoutes.ABOUT]: '/about',
+  [AppRoutes.ABOUT]: '/about'
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -20,5 +20,5 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.ABOUT]: {
     path: RoutesPath.about,
     element: <AboutPage />
-  },
+  }
 };
