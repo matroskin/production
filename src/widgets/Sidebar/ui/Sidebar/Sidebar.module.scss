@@ -9,9 +9,11 @@
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
 }
+
 .switchers {
   padding: 16px;
   width: 100%;
@@ -19,6 +21,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .lang {
   margin-left: 10px;
   font: var(--font-s);

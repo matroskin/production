@@ -1,7 +1,7 @@
-@import './reset.scss';
-@import './variables/global.scss';
-@import './themes/light.scss';
-@import './themes/dark.scss';
+@import './reset';
+@import './variables/global';
+@import './themes/light';
+@import './themes/dark';
 
 .app {
   min-height: 100vh;
@@ -9,13 +9,16 @@
   color: var(--primary-color);
   background: var(--bg-color);
 }
+
 .page-wrapper {
   display: flex;
 }
+
 .page-content {
   padding: 24px;
   flex-grow: 1;
 }
+
 svg {
   display: block;
 }
