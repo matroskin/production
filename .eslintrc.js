@@ -5,6 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:i18next/recommended',
     'airbnb'
   ],
   parser: '@typescript-eslint/parser',
@@ -17,7 +18,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'i18next'
   ],
   rules: {
     'comma-dangle': ['error', 'never'],
