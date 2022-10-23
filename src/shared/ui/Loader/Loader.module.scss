@@ -1,0 +1,51 @@
+.loader {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--inverted-bg-color);
+  color: var(--inverted-bg-color);
+  animation: loader 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.loader::before {
+  left: -30px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--inverted-bg-color);
+  color: var(--inverted-bg-color);
+  animation: loader 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.loader::after {
+  left: 30px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--inverted-bg-color);
+  color: var(--inverted-bg-color);
+  animation: loader 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes loader {
+  0% {
+    background-color: var(--inverted-bg-color);
+  }
+
+  50%,
+  100% {
+    background-color: var(--bg-color);
+  }
+}
