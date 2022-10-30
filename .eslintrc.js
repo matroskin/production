@@ -35,7 +35,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
-    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.tsx'] }]
   },
