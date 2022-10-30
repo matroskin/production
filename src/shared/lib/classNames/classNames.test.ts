@@ -1,17 +1,17 @@
-import { classNames } from './classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 describe('classNames', () => {
-  test('with only first param', () => {
+  test('Test with only first param', () => {
     expect(classNames('someClass'))
       .toBe('someClass');
   });
 
-  test('with additional class', () => {
+  test('Test with additional class', () => {
     expect(classNames('someClass', {}, ['class1', 'class2']))
       .toBe('someClass class1 class2');
   });
 
-  test('with mods', () => {
+  test('Test with mods', () => {
     expect(classNames(
       'someClass',
       { hovered: true, scrollable: true },
@@ -20,7 +20,7 @@ describe('classNames', () => {
       .toBe('someClass hovered scrollable class1 class2');
   });
 
-  test('with mods false', () => {
+  test('Test with mods false', () => {
     expect(classNames(
       'someClass',
       { hovered: true, scrollable: false },
@@ -29,7 +29,7 @@ describe('classNames', () => {
       .toBe('someClass hovered class1 class2');
   });
 
-  test('with mods undefined', () => {
+  test('Test with mods undefined', () => {
     expect(classNames(
       'someClass',
       { hovered: true, scrollable: undefined },
