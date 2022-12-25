@@ -1,8 +1,15 @@
-.app.dark {
-  --bg-color: #000;
-  --primary-color: #fff;
-  --secondary-color: #a3a3a3;
-  --inverted-bg-color: #fff;
-  --inverted-primary-color: #000;
-  --inverted-secondary-color: #a3a3a3;
+.app-dark-theme {
+  // --bg-color: #000;
+  // --primary-color: #fff;
+  // --secondary-color: #a3a3a3;
+  // --inverted-bg-color: #fff;
+  // --inverted-primary-color: #000;
+  // --inverted-secondary-color: #a3a3a3;
+
+  --bg-color: #090949;
+  --inverted-bg-color: #e8e8ea;
+  --primary-color: #04ff04;
+  --secondary-color: #049604;
+  --inverted-primary-color: #0232c2;
+  --inverted-secondary-color: #0452ff;
 }

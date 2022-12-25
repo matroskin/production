@@ -11,7 +11,7 @@ function AppRouter() {
           key={path}
           path={path}
           element={(
-            <div className='pageContent'>
+            <div className='page-content'>
               <Suspense fallback={<PageLoader />}>
                 { element }
               </Suspense>
